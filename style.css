@@ -3,7 +3,11 @@ body {
     background-size: cover;
     font-family: Arial, sans-serif;
     text-align: center;
-   
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Removes default margin */
 }
 
 h1 {
@@ -11,7 +15,6 @@ h1 {
 }
 
 button {
-    
     color: white;
     padding: 10px 20px;
     border: none;
@@ -22,16 +25,41 @@ button:hover {
     color: #530080;
 }
 
-
-div
-{
-    margin-top: 220px;
+/* Centering the chat container */
+.chat-container {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding shadow for depth */
+    border-radius: 8px; /* Rounded corners */
 }
-.icon:hover
- {
+
+/* Responsive for smaller devices */
+@media (max-width: 768px) {
+    .chat-container {
+        width: 90%;
+        height: 60%;
+    }
+}
+
+.icon:hover {
     color: #7289da;
- }
- .download-button:hover {
+}
+
+.download-button {
+    display: block;
+    margin-top: 20px;
+}
+
+.download-button:hover {
     background-color: magenta;
-    color: white; /* Optional: Change text color for better contrast */
+    color: white;
+}
+
+/* Remove extra margin for div elements to fix positioning */
+div {
+    margin-top: 0; /* Removes unnecessary margin */
 }
